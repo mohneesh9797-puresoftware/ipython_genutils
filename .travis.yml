@@ -6,6 +6,23 @@ python:
     - 2.7
 sudo: false
 env:
+
+matrix:
+    fast_finish: true
+    exclude:
+      # Exclude the default Python 3.5 build
+      - python: 
+             - "nightly"
+             - 3.4
+             - 3.3
+             - 2.7
+
+    include: 
+    - dist: trusty
+      os: linux
+      sudo: true
+      arch: arm64    
+      env:
 install:
     - pip install -e . coveralls
 script:
