@@ -11,6 +11,7 @@ matrix:
     fast_finish: true
     exclude:
       # Exclude the default Python 3.5 build
+      language: python
       - python: 
              - "nightly"
              - 3.4
