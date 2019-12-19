@@ -9,20 +9,18 @@ env:
 
 matrix:
     fast_finish: true
-    exclude:
-      # Exclude the default Python 3.5 build
-      - language: python
-      - python: 
-             - "nightly"
-             - 3.4
-             - 3.3
-             - 2.7
-
+      
     include: 
     - dist: trusty
       os: linux
       sudo: true
-      arch: arm64    
+      arch: arm64 
+      language: python
+      python: 
+             - "nightly"
+             - 3.4
+             - 3.3
+             - 2.7
       env:
 install:
     - pip install -e . coveralls
