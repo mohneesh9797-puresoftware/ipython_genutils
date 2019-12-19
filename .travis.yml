@@ -1,16 +1,13 @@
-
-matrix:      
-    include: 
-    - dist: trusty
-      os: linux
-      sudo: true
-      arch: arm64 
-      language: python
-      python: 
-             - "nightly"
-             - 3.4
-             - 3.3
-             - 2.7
+dist: trusty
+os: linux
+sudo: true
+arch: arm64 
+language: python
+python: 
+       - "nightly"
+       - 3.4
+       - 3.3
+       - 2.7
       env:
 install:
     - pip install -e . coveralls
