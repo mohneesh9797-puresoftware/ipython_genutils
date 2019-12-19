@@ -1,15 +1,5 @@
-language: python
-python:
-    - "nightly"
-    - 3.4
-    - 3.3
-    - 2.7
-sudo: false
-env:
 
-matrix:
-    fast_finish: true
-      
+matrix:      
     include: 
     - dist: trusty
       os: linux
